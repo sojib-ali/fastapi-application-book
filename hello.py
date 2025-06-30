@@ -1,10 +1,10 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Header
 
 app = FastAPI()
 
-@app.get("/hi")
-def greet(who):
-    return  f"ola {who}"
+@app.post("/hi")
+def greet(who: str = Header("World", alias="X-Who")):
+    return f"ola {who}"
 
 if __name__ == "__main__":
     import uvicorn
