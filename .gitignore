@@ -1,0 +1,14 @@
+__pycache__/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+# Replace 'ftpi/' with the actual name of your venv directory
+ftpi/
+
+# IDE / Editor specific
+.vscode/
+.idea/
+
