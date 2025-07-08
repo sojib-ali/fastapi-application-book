@@ -7,12 +7,9 @@ class Creature(BaseModel):
     description: str
     aka: str
 
-thing = Creature(
-    name = 'yeti',
-    country = 'CN',
-    area = 'Himalayas',
-    description = 'Hirsute Himalayan',
-    aka = 'Abominable Snowman'
-)
-
-print("Name is", thing.name)
+# if __name__ == "__main__":
+#     # This block only runs when the script is executed directly
+#     thing = Creature(
+#         name='yeti', country='CN', area='Himalayas',
+#         description='Hirsute Himalayan', aka='Abominable Snowman')
+#     print("Name is", thing.name)
