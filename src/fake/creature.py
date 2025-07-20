@@ -1,4 +1,4 @@
-from ..model.creature import Creature
+from model.creature import Creature
 
 _creatures = [
     Creature(name="Yeti", 
