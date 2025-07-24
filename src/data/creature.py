@@ -1,5 +1,5 @@
-from init import conn, curs
-from model.creature import Creature
+from .init import conn, curs
+from ..model.creature import Creature
 
 curs.execute('''create table if not exists creature(
              name text primary key,
@@ -54,11 +54,3 @@ def delete(creature: Creature) -> bool:
     params = {'name': creature.name}
     res = curs.execute(qry, params)
     return bool(res)
-
-def replace(creature: Creature):
-    return creature
-
-def delete(creature: Creature):
-    qry = 'delete form creature where name = :name'
-    params = {'name': creature.name}
-    curs.execute(qry, params)
