@@ -15,12 +15,12 @@ def row_to_model(row:tuple)->User:
     return User(name=name, hash=hash)
 
 def model_to_dict(user:User) -> dict:
-    return user.dict()
+    return user.model_dump()
 
 def get_one(name:str) -> User:
-    qry = 'select * form user where name=:name'
+    qry = 'select * from user where name=:name'
     params={'name':name}
-    curs.executive(qry, params)
+    curs.execute(qry, params)
     row=curs.fetchone()
     if row:
         return row_to_model(row)
