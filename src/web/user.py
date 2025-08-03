@@ -4,7 +4,7 @@ from model.user import User
 from datetime import timedelta, datetime
 
 from service import user as service
-from error import Missing, Duplicate
+from errors import Missing, Duplicate
 
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
